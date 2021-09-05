@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.agdturner</groupId>
+    <artifactId>ccg-io-example</artifactId>
+    <version>0.1.0</version>
+    <packaging>jar</packaging>
+
+    <name>ccg-io-example</name>
+    <url>https://github.com/agdturner/ccg-io-example</url>
+    <description>Exemplar usage of ccg-io.</description>
+    <scm>
+        <url>git@github.com:agdturner/ccg-io-example.git</url>
+        <connection>scm:git:git@github.com:agdturner/ccg-io-example.git</connection>
+        <developerConnection>scm:git:git@github.com:agdturner/ccg-io-example</developerConnection>
+        <tag>ccg-io-example-0.1.0</tag>
+    </scm>
+    <licenses>
+        <license>
+            <name>APACHE LICENSE, VERSION 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <organization>
+        <name>Centre for Computational Geography, University of Leeds</name>
+        <url>http://www.ccg.leeds.ac.uk/</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>agdturner</id>
+            <name>Andy Turner</name>
+            <email>a.g.d.turner@leeds.ac.uk</email>
+            <organization>Centre for Computational Geography, University of Leeds</organization>
+            <organizationUrl>http://www.ccg.leeds.ac.uk</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+        </plugins>
+    </build>
+        
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/io.github.agdturner/ccg-io -->
+        <dependency>
+            <groupId>io.github.agdturner</groupId>
+            <artifactId>ccg-io</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+    </dependencies>
+    
+</project>
