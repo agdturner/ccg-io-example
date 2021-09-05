@@ -49,6 +49,7 @@ public class CacheCRUD {
              */
             String name = "Long";
             IO_Cache c = new IO_Cache(p, name, range);
+            System.out.println(c.toString());
             /**
              * It is normal to also keep look-ups of the things we want to
              * store. (N.B. It is possible to store look-ups of look-ups to
@@ -83,6 +84,7 @@ public class CacheCRUD {
                 c.add(t);
                 lu.put(i, t);
             }
+            System.out.println(c.toString());
             /**
              * The following prints out the directory structure so it can be
              * inspected.
@@ -93,7 +95,7 @@ public class CacheCRUD {
              * this.
              */
             long pos = 1000L;
-            Path posp = c.getPath(pos);
+            Path posp = Paths.get(c.getPath(pos).toString(), name);
             System.out.println("The path to the thing stored with index=" + pos
                     + " is " + posp.toString());
             /**
@@ -110,9 +112,10 @@ public class CacheCRUD {
                 c.add(t);
                 lu.put(i, t);
             }
-            posp = c.getPath(pos);
+            posp = Paths.get(c.getPath(pos).toString(), name);
             System.out.println("The new path to the thing stored with index="
                     + pos + " is " + posp.toString());
+            System.out.println(c.toString());
             /**
              * Set something in the look-up to null.
              */
@@ -138,7 +141,13 @@ public class CacheCRUD {
             /**
              * At this point the thing in the cache does correspond to the 
              * thing in the look-up.
-             */            
+             */
+            /**
+             * Create a new IO_Cache instance that provides a way to read things 
+             * from an existing cache.
+             */
+            IO_Cache ac = new IO_Cache(Paths.get(p.toString(), name));
+            System.out.println(ac.toString());
             /**
              * Delete the cache to tidy up all the files. (N.B. Java is
              * typically quicker to do this than a Windows OS). (N.B. If this
