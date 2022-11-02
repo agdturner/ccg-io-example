@@ -7,7 +7,7 @@
 
     <groupId>io.github.agdturner</groupId>
     <artifactId>ccg-io-example</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
 
     <name>ccg-io-example</name>
@@ -17,7 +17,7 @@
         <url>git@github.com:agdturner/ccg-io-example.git</url>
         <connection>scm:git:git@github.com:agdturner/ccg-io-example.git</connection>
         <developerConnection>scm:git:git@github.com:agdturner/ccg-io-example</developerConnection>
-        <tag>ccg-io-example-0.1.0</tag>
+        <tag>ccg-io-example-0.1.1</tag>
     </scm>
     <licenses>
         <license>
@@ -44,8 +44,8 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <build>
@@ -53,7 +53,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.10.1</version>
             </plugin>
         </plugins>
     </build>
@@ -63,7 +63,7 @@
         <dependency>
             <groupId>io.github.agdturner</groupId>
             <artifactId>ccg-io</artifactId>
-            <version>1.1.0</version>
+            <version>1.1.1</version>
         </dependency>
     </dependencies>
     
